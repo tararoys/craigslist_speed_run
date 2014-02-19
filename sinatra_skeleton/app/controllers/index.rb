@@ -10,3 +10,8 @@ get '/categories/:id' do
   @posts = @category.posts
   erb :category
 end
+
+get '/posts/:id' do
+  @post = Post.find_by(id: params[:id])
+  erb :post
+end
